@@ -16,8 +16,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 3- Used Typescript
 
-4- I considered using form for many reasons. Firstly, it will elimintate the usa
+4- I considered using form for many reasons. 
+Pros:
+* It will eliminate the use of internal React state ( well, the state is in the DOM)
+* If in the future we wanted to add more fields, like "Your favourite photo" etc, it will be a matter of just adding the field
+* It is more screen reader friendly and more accessible
+* I used checkboxes, so I get the "multiple selection" out of the box for free
 
+Cons:
+* If the number of photos grow over 10000 (very unlikely, considering the UX), 
+it might not be the best performance to query the form and find all the checkboxes, but there are ways to rectify this issue.
 
 
 ## TBC : 
