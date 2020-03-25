@@ -1,13 +1,24 @@
 import React from 'react';
 import './App.scss';
-import Photo from './components/photo/Photo';
+import Container from './components/container/Container';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import AlbumPage from './pages/album/album-page';
 
 function App() {
   return (
-    <div className="App">
-     <Photo src={'https://image.shutterstock.com/image-photo/white-transparent-leaf-on-mirror-260nw-577160911.jpg'}
-            id={'test'} caption={'Photo Title'} alt={'asdsad'}/>
-    </div>
+      <div className="App">
+        <main>
+          <Container>
+            <Router>
+              <Switch>
+                <Route path="/album/:albumId">
+                  <AlbumPage/>
+                </Route>
+              </Switch>
+            </Router>
+          </Container>
+        </main>
+      </div>
   );
 }
 

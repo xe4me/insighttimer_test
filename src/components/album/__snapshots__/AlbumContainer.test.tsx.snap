@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should fetch the album and photos and render the children 1`] = `
+<Memo()
+  albumId="2"
+>
+  <Memo()
+    album={
+      Object {
+        "_meta": Object {
+          "code": 200,
+          "message": "OK. Everything worked as expected.",
+          "rateLimit": Object {
+            "limit": 30,
+            "remaining": 29,
+            "reset": 2,
+          },
+          "success": true,
+        },
+        "result": Object {
+          "_links": Object {
+            "edit": Object {
+              "href": "https://gorest.co.in/public-api/albums/3",
+            },
+            "self": Object {
+              "href": "https://gorest.co.in/public-api/albums/3",
+            },
+          },
+          "id": "3",
+          "title": "In facilis aut aperiam quo qui quia.",
+          "user_id": "758",
+        },
+      }
+    }
+    handleHide={[Function]}
+    photos={
+      Object {
+        "_meta": Object {
+          "code": 200,
+          "currentPage": 1,
+          "message": "OK. Everything worked as expected.",
+          "pageCount": 1,
+          "perPage": 20,
+          "rateLimit": Object {
+            "limit": 30,
+            "remaining": 28,
+            "reset": 4,
+          },
+          "success": true,
+          "totalCount": 2,
+        },
+        "result": Array [
+          Object {
+            "_links": Object {
+              "edit": Object {
+                "href": "https://gorest.co.in/public-api/photos/1963",
+              },
+              "self": Object {
+                "href": "https://gorest.co.in/public-api/photos/1963",
+              },
+            },
+            "album_id": "3",
+            "id": "1963",
+            "thumbnail": "https://lorempixel.com/150/150/abstract/?19973",
+            "title": "Suscipit ea quae explicabo. Consequuntur quasi aut similique consequatur ex culpa.",
+            "url": "https://lorempixel.com/1024/768/abstract/?17727",
+          },
+          Object {
+            "_links": Object {
+              "edit": Object {
+                "href": "https://gorest.co.in/public-api/photos/2569",
+              },
+              "self": Object {
+                "href": "https://gorest.co.in/public-api/photos/2569",
+              },
+            },
+            "album_id": "3",
+            "id": "2569",
+            "thumbnail": "https://lorempixel.com/150/150/abstract/?42724",
+            "title": "Quos ab pariatur molestias eum labore. Commodi excepturi harum nihil nihil id repellendus.",
+            "url": "https://lorempixel.com/1024/768/abstract/?10565",
+          },
+        ],
+      }
+    }
+  >
+    <form
+      className="Album"
+      onSubmit={[Function]}
+    >
+      <div
+        className="Album__Header"
+      >
+        <Typography
+          variant="h5"
+        >
+          <h5
+            className="Typography Typography--h5"
+          />
+        </Typography>
+        <Memo()
+          color="secondary"
+          type="submit"
+        >
+          <button
+            className="Button Button--secondary"
+            type="submit"
+          >
+            Hide
+          </button>
+        </Memo()>
+      </div>
+      <Memo()
+        photos={
+          Object {
+            "_meta": Object {
+              "code": 200,
+              "currentPage": 1,
+              "message": "OK. Everything worked as expected.",
+              "pageCount": 1,
+              "perPage": 20,
+              "rateLimit": Object {
+                "limit": 30,
+                "remaining": 28,
+                "reset": 4,
+              },
+              "success": true,
+              "totalCount": 2,
+            },
+            "result": Array [
+              Object {
+                "_links": Object {
+                  "edit": Object {
+                    "href": "https://gorest.co.in/public-api/photos/1963",
+                  },
+                  "self": Object {
+                    "href": "https://gorest.co.in/public-api/photos/1963",
+                  },
+                },
+                "album_id": "3",
+                "id": "1963",
+                "thumbnail": "https://lorempixel.com/150/150/abstract/?19973",
+                "title": "Suscipit ea quae explicabo. Consequuntur quasi aut similique consequatur ex culpa.",
+                "url": "https://lorempixel.com/1024/768/abstract/?17727",
+              },
+              Object {
+                "_links": Object {
+                  "edit": Object {
+                    "href": "https://gorest.co.in/public-api/photos/2569",
+                  },
+                  "self": Object {
+                    "href": "https://gorest.co.in/public-api/photos/2569",
+                  },
+                },
+                "album_id": "3",
+                "id": "2569",
+                "thumbnail": "https://lorempixel.com/150/150/abstract/?42724",
+                "title": "Quos ab pariatur molestias eum labore. Commodi excepturi harum nihil nihil id repellendus.",
+                "url": "https://lorempixel.com/1024/768/abstract/?10565",
+              },
+            ],
+          }
+        }
+      >
+        <ul
+          className="Photos"
+        />
+      </Memo()>
+    </form>
+  </Memo()>
+</Memo()>
+`;

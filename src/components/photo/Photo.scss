@@ -1,22 +1,30 @@
 @import "src/styles/abstracts";
 
-$image_dimension: 60px;
+$image_dimension: 50px;
 .Photo {
   font-size: 1rem;
   display: flex;
   align-items: center;
   color: $color-primary;
-  padding: $spacing_half;
+  padding: $spacing;
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
   cursor: pointer;
+  position: relative;
 
   // @TODO : Create mixin for transitions for consistency
   transition: 300ms border-color linear;
   @include hover {
     border-color: $color-grey-light;
     background-color: #ffffff;
+  }
+  @include phone {
+    width: 100%;
+    flex: 1;
+  }
+  @include tablet-portrait-up {
+    max-width: 350px;
   }
 
   &__Image {
@@ -28,14 +36,12 @@ $image_dimension: 60px;
   &__Caption {
     font-weight: 500;
     font-size: 1.22em;
+    margin-right: $spacing_half;
   }
 
   &__Action {
     flex: 1;
     text-align: right;
-
-    &-Tick {
-    }
 
     &-Checkbox {
       visibility: hidden;
@@ -43,6 +49,18 @@ $image_dimension: 60px;
       opacity: 0;
       height: 0;
       width: 0;
+
+      &:checked + .Photo__Action-Tick {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &-Tick {
+      // @TODO : Create mixin for transitions for consistency
+      transition: 300ms all linear;
+      visibility: hidden;
+      opacity: 0;
     }
   }
 }

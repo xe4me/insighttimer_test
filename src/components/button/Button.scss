@@ -1,0 +1,29 @@
+@import "src/styles/abstracts";
+
+.Button {
+  color: #fff;
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 1;
+  cursor: pointer;
+  padding: $spacing_quarter $spacing_quarter + $spacing_quarter/2;
+  // @TODO  this is so arbitrary !!!!
+  // I would definitely talk to the designers and figure our what the actual dimensions of the buttons are
+  // Unfortunately with the provided design, it's quite difficult to get the correct size from the photo
+  outline: none;
+  font-weight: 500;
+  font-size: 1em;
+
+  &--primary {
+    // left out empty because I have no use case, but perhaps in the real world. we would need them.
+    // ....
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    @include hover {
+      background-color: darken($color-secondary, 4);
+    }
+  }
+}

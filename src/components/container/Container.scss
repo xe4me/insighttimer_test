@@ -1,0 +1,10 @@
+@import "src/styles/abstracts";
+
+.Container {
+  @include phone {
+    margin: 80px 0;
+  }
+  @include tablet-portrait-up {
+    margin: 80px 160px;
+  }
+}

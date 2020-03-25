@@ -71,14 +71,4 @@ describe('Photo', () => {
     });
   });
 
-  describe('<fieldset/> element', () => {
-    it('should NOT render the tick icon if selected prop is false or undefined', () => {
-      const PhotoComponent = mount(<Photo id={'testid'} selected={false} caption={'Test caption'} src={'/test.jpg'} alt={'No image here'}/>);
-      expect(PhotoComponent.find('span.Photo__Action-Tick').length).toEqual(0)
-    });
-    it('should render the tick icon if selected prop is true', () => {
-      const PhotoComponent = mount(<Photo id={'testid'} selected={true} caption={'Test caption'} src={'/test.jpg'} alt={'No image here'}/>);
-      expect(PhotoComponent.find('span.Photo__Action-Tick').length).toEqual(1)
-    });
-  });
 });

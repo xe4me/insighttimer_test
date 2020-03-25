@@ -1,0 +1,13 @@
+@import "src/styles/abstracts";
+
+.Album {
+  font-size: 1rem;
+
+  &__Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $spacing;
+    padding: $spacing;
+  }
+}
